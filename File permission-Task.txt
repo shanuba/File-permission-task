@@ -1,0 +1,23 @@
+root@RENWICK:~# mkdir home
+root@RENWICK:~# cd home
+root@RENWICK:~/home# touch demo.txt
+root@RENWICK:~/home# ls
+demo.txt
+root@RENWICK:~/home# useradd harry
+root@RENWICK:~/home# passwd
+New password:
+Retype new password:
+passwd: password updated successfully
+root@RENWICK:~/home#  groupadd task3
+groupadd: group 'task3' already exists
+root@RENWICK:~/home# groupadd task
+root@RENWICK:~/home# groups task
+groups: ‘task’: no such user
+root@RENWICK:~/home# usermod -aG task harry
+root@RENWICK:~/home# groups harry
+harry : harry task
+root@RENWICK:~/home# chmod 764 demo.txt
+root@RENWICK:~/home# ls -l
+total 0
+-rwxrw-r-- 1 root root 0 Sep  9 16:17 demo.txt
+root@RENWICK:~/home#
