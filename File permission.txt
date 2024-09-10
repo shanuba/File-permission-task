@@ -1,0 +1,16 @@
+root@RENWICK:~# mkdir home
+root@RENWICK:~# cd home
+root@RENWICK:~/home# touch demo.txt
+root@RENWICK:~/home# ls
+demo.txt
+root@RENWICK:~/home# useradd aalice
+root@RENWICK:~/home# groupadd popy
+root@RENWICK:~/home# usermod -aG popy aalice
+root@RENWICK:~/home# groups aalice
+aalice : aalice popy
+root@RENWICK:~/home# chown aalice:popy demo.txt
+root@RENWICK:~/home# chmod 764 demo.txt
+root@RENWICK:~/home# ls -l
+total 0
+-rwxrw-r-- 1 aalice popy 0 Sep 10 08:25 demo.txt
+root@RENWICK:~/home#
